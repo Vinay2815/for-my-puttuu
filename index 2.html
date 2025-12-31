@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year Puttuu ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #4b0f6b, #0b0012);
+  color:#fff;
+  text-align:center;
+}
+.container {
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+.card {
+  max-width:420px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius:22px;
+  padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+h1 { margin-bottom:6px; }
+.sub { opacity:0.9; margin-bottom:16px; }
+.heart {
+  width:90px;height:90px;border-radius:50%;
+  background:linear-gradient(135deg,#ff5ea8,#ff8ccf);
+  display:flex;align-items:center;justify-content:center;
+  font-size:38px;cursor:pointer;margin:18px auto;
+  animation:pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+.hidden{display:none;}
+.message {
+  background:rgba(255,255,255,0.06);
+  padding:16px;
+  border-radius:14px;
+  line-height:1.6;
+  margin-top:16px;
+  font-size:15px;
+}
+.footer {
+  margin-top:12px;
+  font-size:13px;
+  opacity:0.7;
+}
+.firework {
+  position:fixed;
+  width:6px;height:6px;
+  background:#fff;
+  border-radius:50%;
+  animation: explode 1.8s infinite;
+}
+@keyframes explode {
+  0% {transform:scale(0);opacity:1}
+  100% {transform:scale(25);opacity:0}
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_6c6f7d41d8.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <div class="card">
+    <h1>Happy New Year 🎆</h1>
+    <div class="sub">A little surprise for my Puttuu</div>
+
+    <div class="heart" onclick="openLove()">❤️</div>
+    <div class="sub">Tap the heart</div>
+
+    <div id="love" class="hidden">
+      <div class="message">
+        <b>Thank you so much, my puttaneeee 😚😚😚😚😚😚😚</b><br><br>
+
+        I don’t want anything else in this world.<br>
+        <b>You and your love, your care, your presence — that is enough for me.</b><br><br>
+
+        If you are with me, I can achieve anything in this world 😚🫂<br><br>
+
+        You are my everything, Puttuuu 😚❤️❤️<br>
+        I will always love you — like my baby, like my princess 👑<br><br>
+
+        We will always be together, lifetime bangaraa 😚🫂🤌🏻<br>
+        No matter what happens, we will stand for each other always 🫶🏻🫶🏻<br><br>
+
+        I promise you this —<br>
+        <b>I will definitely give you the life you deserve.</b><br><br>
+
+        I love you so much, Puttu 😚❤️🫂🫂🫂🫂<br><br>
+
+        <b>Happy New Year, my love 🎆❤️</b>
+      </div>
+    </div>
+
+    <div class="footer">For my Puttuu 💖</div>
+  </div>
+</div>
+
+<script>
+function openLove(){
+  document.getElementById("love").classList.remove("hidden");
+  for(let i=0;i<10;i++){
+    let f=document.createElement("div");
+    f.className="firework";
+    f.style.left=Math.random()*100+"vw";
+    f.style.top=Math.random()*100+"vh";
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),1800);
+  }
+}
+</script>
+
+</body>
+</html>
